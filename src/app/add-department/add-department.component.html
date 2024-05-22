@@ -1,0 +1,22 @@
+<div class="container text-capitalize">
+    <h1 class="text-center"> Add new department</h1>
+    <div class="mb-3">
+        <label for="departmentId"  class="mb-2"f> department Id</label>
+        <input type="text" class="form-control"  id="departmentId" [(ngModel)]="newDepartment._id">
+    </div>
+   <div class="mb-3">
+        <label for="departmentName" class="mb-2"> department name</label>
+        <input type="text" class="form-control" id="departmentName" [(ngModel)]="newDepartment.name">
+   </div>
+    <div class="mb-3">
+       <label for="departmentLocation" class="mb-2"> departments</label>
+       <select  id="departmentLocation" class="form-select w-50 mb-4 "  [(ngModel)]="newDepartment.location">
+                <option>alex</option>
+                <option>mansoura</option>
+                <option>smart</option>
+        </select>
+    </div>
+    <div class="mb-3 text-center">
+        <button class="btn btn-primary w-25" (click)="save()"> Add </button>
+    </div>
+</div>

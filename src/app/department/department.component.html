@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2>Departments</h2>
+        <ul class="list-group mt-3">
+          <li *ngFor="let department of dep" class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <span>{{ department.name}}</span>
+              <span>{{ department.location }}</span>
+              <div>
+                <a [routerLink]="['/department/edit', department._id]" class="btn btn-primary btn-md mr-2">Edit</a>
+                <a [routerLink]="['/department/details', department._id]" class="btn btn-info btn-md">Show</a>
+                <button (click)="delete(department._id)" class="btn btn-danger">Delete</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a [routerLink]="['/department/add']" class="btn btn-info btn-md">add</a>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  
